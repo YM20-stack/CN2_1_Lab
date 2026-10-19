@@ -1,0 +1,19 @@
+graph LR
+      subgraph LOCA [Technical room A, building A]
+           CCA[CC-A]
+           UPSA[UPS A]
+      end
+      subgraph C [Tunnel under the courtyard]
+           Cable_chamber[Cable Chamber]
+      end
+      subgraph LOCB [Technical room B, building B]
+           CCB[CC-B]
+           UPSB[UPS B]
+      end
+      UPSA--- CCA
+      UPSB--- CCB
+      
+      CCA---|North Technical Gallery| Cable_chamber
+      CCA---|South Outer Façade|  Cable_chamber
+      Cable_chamber---|North Technical Gallery| CCB
+      Cable_chamber---|South Outer Façade| CCB
